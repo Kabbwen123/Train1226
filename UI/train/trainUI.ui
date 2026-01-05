@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1179</width>
+    <height>740</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_3">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_side">
+     <property name="spacing">
+      <number>8</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="pjtInfoFrame">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Shape::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Shadow::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2"/>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="gbRuns">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="title">
+        <string>模型训练</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_runs">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>10</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>10</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="btnCreateModel">
+          <property name="text">
+           <string>创建模型</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>320</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>318</width>
+             <height>591</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="sideBottomBar">
+          <property name="frameShape">
+           <enum>QFrame::Shape::NoFrame</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_sideBottom">
+           <property name="spacing">
+            <number>8</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QToolButton" name="btnPlay">
+             <property name="text">
+              <string>开始训练</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QToolButton" name="btnAssess">
+             <property name="text">
+              <string>开始评估</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_main_2">
+     <property name="spacing">
+      <number>8</number>
+     </property>
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="leftMargin">
+        <number>5</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="mutedHint_3">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>训练开始后即无法更改训练参数。创建新训练或重置训练。</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="saveCfgBtn">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>保存配置</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QSplitter" name="splitter_panels_2">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Horizontal</enum>
+       </property>
+       <widget class="QWidget" name="colLeft_2">
+        <layout class="QVBoxLayout" name="verticalLayout_colLeft_2">
+         <property name="spacing">
+          <number>8</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QGroupBox" name="gbSplit_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>400</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>数据集</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_4"/>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="gbNetwork_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>400</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>神经网络</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_network_2">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="topMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>10</number>
+            </property>
+            <property name="horizontalSpacing">
+             <number>8</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>6</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="backbone_nameLab">
+              <property name="text">
+               <string>预训练模型</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSpinBox" name="input_sizeWSpb">
+              <property name="maximum">
+               <number>1920</number>
+              </property>
+              <property name="value">
+               <number>256</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="input_sizeWLab">
+              <property name="text">
+               <string>图像宽度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
+             <widget class="QSpinBox" name="patch_sizeSpb">
+              <property name="maximum">
+               <number>1024</number>
+              </property>
+              <property name="singleStep">
+               <number>2</number>
+              </property>
+              <property name="value">
+               <number>33</number>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="leftMargin">
+               <number>3</number>
+              </property>
+              <property name="topMargin">
+               <number>4</number>
+              </property>
+              <item>
+               <widget class="QCheckBox" name="embedding1Cbx">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;         /* 方框白 */
+    border-radius: 3px;
+}
+QCheckBox::indicator:checked {
+    background: #2B2B2B;         /* 反色：选中变深底 */
+    border: 1px solid #FFFFFF;
+    image: url(:/icons/check_white.svg);  /* 白勾 */
+}
+QCheckBox::indicator:checked:hover {
+    background: #3A3A3A;
+}</string>
+                </property>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="embedding2Cbx">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;         /* 方框白 */
+    border-radius: 3px;
+}
+QCheckBox::indicator:checked {
+    background: #2B2B2B;         /* 反色：选中变深底 */
+    border: 1px solid #FFFFFF;
+    image: url(:/icons/check_white.svg);  /* 白勾 */
+}
+QCheckBox::indicator:checked:hover {
+    background: #3A3A3A;
+}</string>
+                </property>
+                <property name="text">
+                 <string>2</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="embedding3Cbx">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;         /* 方框白 */
+    border-radius: 3px;
+}
+QCheckBox::indicator:checked {
+    background: #2B2B2B;         /* 反色：选中变深底 */
+    border: 1px solid #FFFFFF;
+    image: url(:/icons/check_white.svg);  /* 白勾 */
+}
+QCheckBox::indicator:checked:hover {
+    background: #3A3A3A;
+}</string>
+                </property>
+                <property name="text">
+                 <string>3</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="embedding4Cbx">
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox::indicator {
+    width: 13px;
+    height: 13px;
+    border: 1px solid #FFFFFF;
+    background: #FFFFFF;         /* 方框白 */
+    border-radius: 3px;
+}
+QCheckBox::indicator:checked {
+    background: #2B2B2B;         /* 反色：选中变深底 */
+    border: 1px solid #FFFFFF;
+    image: url(:/icons/check_white.svg);  /* 白勾 */
+}
+QCheckBox::indicator:checked:hover {
+    background: #3A3A3A;
+}</string>
+                </property>
+                <property name="text">
+                 <string>4</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="3" column="0">
+             <widget class="QLabel" name="patch_sizeLab">
+              <property name="text">
+               <string>补丁大小</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="backbone_nameCmb">
+              <item>
+               <property name="text">
+                <string>resnet18</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>resnet34</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>resnet50</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>wide_resnet50_2</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSpinBox" name="input_sizeHSpb">
+              <property name="maximum">
+               <number>1920</number>
+              </property>
+              <property name="value">
+               <number>256</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="input_sizeHLab">
+              <property name="text">
+               <string>图像高度</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="embeddingLab">
+              <property name="text">
+               <string>训练层</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="spacer_colLeft_2">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="colMiddle_2">
+        <layout class="QVBoxLayout" name="verticalLayout_colMiddle_2">
+         <property name="spacing">
+          <number>8</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QGroupBox" name="gbDevice_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>400</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>配置</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_device_2">
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="topMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>10</number>
+            </property>
+            <property name="horizontalSpacing">
+             <number>8</number>
+            </property>
+            <property name="verticalSpacing">
+             <number>6</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="deviceLab">
+              <property name="text">
+               <string>设备</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="deviceCbx"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="gbTrainParams_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>400</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="toolTip">
+            <string/>
+           </property>
+           <property name="title">
+            <string>训练参数</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_trainParams_advanced">
+            <property name="spacing">
+             <number>8</number>
+            </property>
+            <property name="leftMargin">
+             <number>10</number>
+            </property>
+            <property name="topMargin">
+             <number>10</number>
+            </property>
+            <property name="rightMargin">
+             <number>10</number>
+            </property>
+            <property name="bottomMargin">
+             <number>10</number>
+            </property>
+            <item>
+             <layout class="QGridLayout" name="gridLayout_network_4">
+              <property name="horizontalSpacing">
+               <number>8</number>
+              </property>
+              <property name="verticalSpacing">
+               <number>6</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="batch_sizeLab">
+                <property name="text">
+                 <string>批大小</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="batch_sizeCmb">
+                <item>
+                 <property name="text">
+                  <string>2</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>4</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>8</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>16</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>32</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>64</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="seedLab">
+                <property name="text">
+                 <string>随机种子</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="seedSpb">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>999999999</number>
+                </property>
+                <property name="value">
+                 <number>70000</number>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="max_train_featuresLab">
+                <property name="toolTip">
+                 <string>数值越大，后面推理的效率可能有所影响</string>
+                </property>
+                <property name="text">
+                 <string>特征库最大容量</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QSpinBox" name="max_train_featuresSpb">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="minimum">
+                 <number>1000</number>
+                </property>
+                <property name="maximum">
+                 <number>999999999</number>
+                </property>
+                <property name="value">
+                 <number>3333</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QToolButton" name="btnAdvancedTrainParams">
+              <property name="text">
+               <string>高级设置</string>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+              <property name="popupMode">
+               <enum>QToolButton::ToolButtonPopupMode::DelayedPopup</enum>
+              </property>
+              <property name="toolButtonStyle">
+               <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
+              </property>
+              <property name="autoRaise">
+               <bool>true</bool>
+              </property>
+              <property name="arrowType">
+               <enum>Qt::ArrowType::DownArrow</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="widget" native="true">
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="3" column="1">
+                <widget class="QComboBox" name="neighborsCmb">
+                 <item>
+                  <property name="text">
+                   <string>5</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>7</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>9</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QComboBox" name="coresetCmb">
+                 <item>
+                  <property name="text">
+                   <string>random</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>kcenter</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="neighborsLab">
+                 <property name="text">
+                  <string>最邻近数量</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="faissLab">
+                 <property name="text">
+                  <string>检索方式</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QComboBox" name="faissCmb">
+                 <item>
+                  <property name="text">
+                   <string>Flat</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>IVFFlat</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>IVFPQ</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>HNSW</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="coresetLab">
+                 <property name="text">
+                  <string>精简策略</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <widget class="QWidget" name="faissWidget" native="true">
+                 <layout class="QFormLayout" name="formLayout"/>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="spacer_colMiddle_2">
+           <property name="orientation">
+            <enum>Qt::Orientation::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

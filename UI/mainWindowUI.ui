@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1067</width>
+    <height>777</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AI外观检查BOX</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="imgTab">
+       <attribute name="title">
+        <string>图库</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="trainTab">
+       <attribute name="title">
+        <string>训练</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1067</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>.</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="newPjtAct"/>
+    <addaction name="openPjtAct"/>
+    <addaction name="separator"/>
+    <addaction name="sysSettingAct"/>
+    <addaction name="separator"/>
+    <addaction name="action"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <action name="newPjtAct">
+   <property name="text">
+    <string>新建项目</string>
+   </property>
+  </action>
+  <action name="openPjtAct">
+   <property name="text">
+    <string>打开项目</string>
+   </property>
+  </action>
+  <action name="sysSettingAct">
+   <property name="text">
+    <string>系统设置</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>退出</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
